@@ -1,0 +1,12 @@
+screenshotsInTest
+target
+test-output
+.settings
+.idea
+.vscode
+.project
+.classpath
+*.iml
+bin/
+.DS_Store
+*.log

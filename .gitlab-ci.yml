@@ -1,0 +1,27 @@
+variables:
+  HEADLESS: "true"
+  MAVEN_CMD: "mvn -Dmaven.repo.local=$CI_PROJECT_DIR/.m2"
+  SNSAPP: "qast"
+  TEST_FIREFOX: "false"
+  TEST_CHROME: "true"
+
+stages:
+  - build
+  - test:smoke
+  - test:regression
+  - report
+  - report:pages
+  - notification
+
+include:
+  - project: "infrastructure/gitlab-pipeline"
+    file: "variables.yml"
+
+  - project: "infrastructure/gitlab-pipeline"
+    file: "qa/build.yml"
+
+  - project: "infrastructure/gitlab-pipeline"
+    file: "qa/test-report.yml"
+
+  - project: "infrastructure/gitlab-pipeline"
+    file: "qa/sns-publish.yml"

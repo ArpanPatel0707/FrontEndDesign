@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Spec Tool Test Automation Regression Suite">
+
+      <listeners>
+        <listener class-name="com.ats.qa.listener.TestListeners"/>
+    </listeners>
+
+
+    <test name="Spec Tool Test Cases" preserve-order="true">
+          <groups>
+             <run>
+                <include name = "Spec-tool Regression Testing" />
+                 <include name = "Spec-tool Smoke Testing" />
+                <include name = "Always Run Regression Testing" />
+                <include name = "Always Run Smoke Testing" />
+             </run>
+          </groups>
+        <classes>
+               
+        </classes>
+    </test>
+</suite>
+ 
