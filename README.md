@@ -1,1 +1,1 @@
-QA automation repository for spec-tool
+QA automation repository 
